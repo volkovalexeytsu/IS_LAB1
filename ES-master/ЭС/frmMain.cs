@@ -223,7 +223,7 @@ namespace ЭС
                     if (f.Truly == Rightly.Unknown)
                         MessageBox.Show("Не удалось установить истину!");
                     else
-                        MessageBox.Show(f.ToString());
+                        MessageBox.Show(f.ToString() + "\n" + tempES.WorkedRules[tempES.WorkedRules.Count - 1].Reasoning);
                 }
             }
             catch (DomainException de)
