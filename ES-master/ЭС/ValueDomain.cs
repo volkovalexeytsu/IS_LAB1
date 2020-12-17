@@ -95,33 +95,6 @@ namespace ЭС
             listVal[newPos] = pr;
         }
 
-
-        /// <summary>
-        /// Перемещение существующего значения в домене со сдвигом
-        /// </summary>
-        /// <param name="val">Перемещаемое значение</param>
-        /// <param name="newPos">Новая позиция</param>
-        public void Move(string val, int newPos)
-        {
-            if (listVal.Contains(val))
-                Move(listVal.IndexOf(val), newPos);
-            else
-                throw new DomainException("Список значений не содержит требуемого элемента");
-        }
-
-
-        /// <summary>
-        /// Удаление значения с определенной позиции
-        /// </summary>
-        /// <param name="pos">Место в домене</param>
-        public void Remove(int pos)
-        {
-            if ((pos > listVal.Count - 1) || (pos < 0))
-                throw new DomainException("Индекс находился вне границ списка значений");
-            listVal.RemoveAt(pos);
-        }
-
-
         /// <summary>
         /// Удаление определенного значения из домена
         /// </summary>
@@ -152,7 +125,6 @@ namespace ЭС
         {
             return listVal.IndexOf(val);
         }
-
 
         public override string ToString()
         {
