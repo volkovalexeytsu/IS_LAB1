@@ -106,34 +106,6 @@ namespace ЭС
         }
 
         /// <summary>
-        /// Перемащает посылку в списке со сдвигом
-        /// </summary>
-        /// <param name="f">Посылка</param>
-        /// <param name="newPos">Новая позиция</param>
-        public void Move(Fact f, int newPos)
-        {
-            if (this.Contains(f))
-                Move(this.IndexOf(f), newPos);
-            else
-                throw new RuleException("Запрашиваемая посылка не найдена");
-        }
-
-
-        /// <summary>
-        /// Удаляет посылку из списка с определенной позиции
-        /// </summary>
-        /// <param name="pos">Позиция посылки</param>
-        public void Remove(int pos)
-        {
-            if ((pos > reasons.Count - 1) || (pos < 0))
-                throw new RuleException("Индекс находился вне границ списка посылок");
-            if (reasons.Count == 1)
-                throw new RuleException("Попытка удалить едиственную посылку в правиле");
-            reasons.RemoveAt(pos);
-        }
-
-
-        /// <summary>
         /// Удаляет посылку из списка
         /// </summary>
         /// <param name="f">Удаляемая посылка</param>

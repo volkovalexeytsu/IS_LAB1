@@ -51,8 +51,6 @@ namespace ЭС
                 for (int i = 0; i < es.Domains[newDom].Count; i++)
                     listBox2.Items.Add(es.Domains[newDom].GetVal(i));
 
-                //if (es.Domains.ContainsKey(newDom))
-                //    vars[listBox1.SelectedItem.ToString()].Domain = es.Domains[newDom];
             }
         }
 
@@ -257,32 +255,6 @@ namespace ЭС
                 type = VarType.Queried;
             else type = VarType.DeductionQueried;
 
-            //if (listBox1.SelectedIndex < 0)
-            //{
-            //    MessageBox.Show("Сначала необходимо выделить переменную");
-            //    return;
-            //}
-
-            //Variable nv = vars[listBox1.SelectedItem.ToString()];
-            //nv.MyType = type;
-            //// присваиваем тип
-            //switch (type)
-            //{
-            //    case VarType.Deducted: // у выводимой нет вопроса
-            //        nv.Question = "";
-            //        break;
-            //    case VarType.Queried:
-            //    case VarType.DeductionQueried: // стала запрашиваемая
-            //        // если была выводимая - надо убрать ее из правил
-            //        foreach (Rule r in es.Rules.Vals)
-            //        {
-            //            if (r.Result.V.CompareTo(nv) == 0)
-            //            { // убираем из выводов
-            //                r.Result = null;
-            //            }
-            //        }
-            //        break;
-            //} 
         }
 
 
@@ -435,7 +407,7 @@ namespace ЭС
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //vars[listBox1.SelectedItem.ToString()].Question = textBox1.Text;
+
         }
 
 

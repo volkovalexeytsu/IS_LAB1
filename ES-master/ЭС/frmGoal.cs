@@ -44,7 +44,6 @@ namespace ЭС
             else
             {
                 es.Goal = es.Vars[comboBox1.SelectedItem.ToString()];
-                //MessageBox.Show(es.GoConsult().ToString());
                 mother.StartConsult();
                 this.Close();
             }

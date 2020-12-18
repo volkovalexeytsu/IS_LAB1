@@ -29,7 +29,6 @@ namespace ЭС
             InitializeComponent();
             this.f = f;
             foreach (string s in f.es.Vars.Keys)
-                //if (f.es.Vars[s].MyType != VarType.Queried)
                     comboBox2.Items.Add(s);
             this.fact = fact;
             comboBox2.Text = fact.V.Name;

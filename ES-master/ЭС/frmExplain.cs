@@ -18,18 +18,8 @@ namespace ЭС
         {
             InitializeComponent();
 
-            // Добавление каринок
-            Image imgW = global::ЭС.Properties.Resources.Worked;
-            Image imgUW = global::ЭС.Properties.Resources.Unworked;
-            //treeView1.ImageList = new ImageList();
-            //treeView1.ImageList.Images.Add("Sign", imgW);
-            //treeView1.ImageList.Images.Add("Unsign", imgUW);
-            //treeView2.ImageList = new ImageList();
-            //treeView2.ImageList.Images.Add("Sign", imgW);
-            //treeView2.ImageList.Images.Add("Unsign", imgUW);
 
             tempES = es;
-            bool lol = false;
             foreach (Rule r in es.Rules.Vals)
             {
                 if (r.Worked != RuleWork.No)
@@ -46,16 +36,7 @@ namespace ЭС
                     treeView2.Nodes[r.Name].Nodes[r.Name + "ТК"].Nodes.Add(r.Reasoning);
                     treeView2.Nodes[r.Name].ExpandAll();
                 }
-                //if (r.Worked == RuleWork.Signifi)
-                //{
-                //    treeView2.Nodes[r.Name].ImageIndex = 0;
-                //    treeView2.Nodes[r.Name].SelectedImageIndex = 0;
-                //}
-                //else if (r.Worked == RuleWork.Unsignify)
-                //{
-                //    treeView2.Nodes[r.Name].ImageIndex = 1;
-                //    treeView2.Nodes[r.Name].SelectedImageIndex = 1;
-                //}
+
             }
 
             foreach (Rule r in es.WorkedRules)
@@ -73,7 +54,6 @@ namespace ЭС
                     treeView1.Nodes[r.Name].Nodes[r.Name + "ТО"].Nodes.Add(r.Result.ToString());
                     treeView1.Nodes[r.Name].Nodes[r.Name + "ТК"].Nodes.Add(r.Reasoning);
                     treeView1.Nodes[r.Name].ExpandAll();
-                    //treeView1.Nodes[r.Name].ImageIndex = 0;
                 }
             }
 
